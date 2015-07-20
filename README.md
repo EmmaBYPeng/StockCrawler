@@ -1,6 +1,5 @@
-HSI -- 恒生指数
-HSCE -- Hang Seng China Enterprises Index 国企指数
-DJI -- Dow Jones Index
-IXIC -- Nasdaq Composite
-GSPC -- Standard & Poor 500 标准普尔
-000001.SS -- 上海证券交易所综合股价指数（上证综指）
+Web crawling: 
+  - Data from 1995 to 2015: HSI, HSCE, DJI, IXIC, GSPC, 000001.SS
+  - Run Scrapy: scrapy crawl stock -o data.csv -t csv
+
+Data cleaning: processData.py
