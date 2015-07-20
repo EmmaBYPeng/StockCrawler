@@ -7,8 +7,11 @@
 
 import scrapy
 
+def serialize_value(value):
+  return "%s\n" % str(value) 
 
 class StockItem(scrapy.Item):
-    # define the fields for your item here like:
-    title = scrapy.Field()
-    value = scrapy.Field()
+  # define the fields for your item here like:
+  title = scrapy.Field(serializer=serialize_value)
+  openPrice = scrapy.Field(serializer=serialize_value)
+  date = scrapy.Field(serializer=serialize_value)
